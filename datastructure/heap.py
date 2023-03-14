@@ -117,7 +117,7 @@ class MaxHeap:
         """
         assert type(x) == int or type(x) == float, 'Expected int or float value'
         self.heap.append(x)
-        idx = len(self.heap)
+        idx = len(self.heap) - 1
         while idx > 0 and self.heap[idx] > self.heap[(idx - 1) // 2]:
             self.heap[idx], self.heap[(idx - 1) // 2] = self.heap[(idx - 1) // 2], self.heap[idx]
             idx = (idx - 1) // 2
